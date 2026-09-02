@@ -1,0 +1,14 @@
+{
+  "name": "Discord Bot Starter",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "postCreateCommand": "cp -n .env.example .env && npm install",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.exclude": {
+          "node_modules": true
+        }
+      }
+    }
+  }
+}

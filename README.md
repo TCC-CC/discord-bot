@@ -1,5 +1,12 @@
 # discord.js bot template
 
+A minimal Discord bot that logs in and goes online. Nothing else.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/al007ex/hello-discord)
+
+Click the badge to run it in your browser. Node, the dependencies, and your `.env`
+file are all set up for you, so you can skip straight to pasting your token.
+
 ### Helpful Resources
 * [Node.js](https://nodejs.org/en/download) — Download and install Node.js
 * [Discord Developer Portal](https://discord.com/developers/applications) — Create and manage your Discord application and bot
