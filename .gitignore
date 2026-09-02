@@ -1,0 +1,6 @@
+# NEVER commit your token
+.env
+
+node_modules/
+npm-debug.log*
+.DS_Store
