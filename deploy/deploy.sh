@@ -15,11 +15,16 @@ git fetch --quiet origin main
 OLD=$(git rev-parse HEAD)
 NEW=$(git rev-parse origin/main)
 
+if git diff --quiet --exit-code OLD NEW -- "../commands"; then
+  node --env-file=.env deploy/register-commands.js
+  REGISTERED_COMMANDS=$?
+fi
+
 if [ "$OLD" = "$NEW" ]; then
   exit 0
 fi
 
-notify "Pulling [\`$(git rev-parse --short "$OLD")\`]($COMMIT_URL/$OLD) -> [\`$(git rev-parse --short "$NEW")\`]($COMMIT_URL/$NEW)"
+notify "Pulling [\`$(git rev-parse --short "$OLD")\`]($COMMIT_URL/$OLD) -> [\`$(git rev-parse --short "$NEW")\`]($COMMIT_URL/$NEW) $(if [ `$REGISTERED_COMMANDS` -eq 0 ]; then echo "and registered commands"; fi)"
 
 git reset --hard --quiet origin/main
 npm install --omit=dev --silent
