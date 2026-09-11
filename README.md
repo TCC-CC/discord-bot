@@ -2,7 +2,7 @@
 
 A minimal Discord bot that logs in and goes online. Nothing else.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/al007ex/tcc-bot)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/TCC-CC/discord-bot)
 
 Click the badge to run it in your browser. Node, the dependencies, and your `.env`
 file are all set up for you, so you can skip straight to pasting your token.
