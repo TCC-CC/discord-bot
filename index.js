@@ -18,6 +18,8 @@ client.on(Events.MessageCreate, (message) => {
   if (message.content === 'ping') {
     message.reply('pong');
   }
+
+  
 });
 
 // Never paste it directly into this file
