@@ -5,8 +5,6 @@ import path from 'path'
 
 const COMMANDS_TOP_DIR = path.join(import.meta.dirname, 'commands')
 
-await RegisterCommands(COMMANDS_TOP_DIR)
-
 const client = new Client({
   intents: [GatewayIntentBits.Guilds,
             GatewayIntentBits.GuildMessages,
@@ -32,6 +30,7 @@ for (const commandDir of fs.readdirSync(COMMANDS_TOP_DIR)) {
 // Fires once, when the login succeeds and the bot goes green
 client.once(Events.ClientReady, (readyClient) => {
   console.log(`Logged in as ${readyClient.user.tag}`);
+  RegisterCommands(COMMANDS_TOP_DIR, client.user.id)
 });
 
 client.on(Events.MessageCreate, (message) => {
